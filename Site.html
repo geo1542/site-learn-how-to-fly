@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn How to Fly in 4 Weeks | Digital Flying Guide</title>
+  <meta name="description" content="Learn How to Fly in 4 Weeks is a step-by-step digital book that teaches you the fundamentals of flying with confidence. Download instantly and start your journey." />
+  <meta name="keywords" content="learn how to fly, flying guide, aviation ebook, pilot basics, digital flying book" />
+
+  <style>
+    :root {
+      --primary: #1e3a8a; /* deep sky blue */
+      --secondary: #38bdf8; /* light sky */
+      --accent: #facc15; /* sunshine */
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #e0f2fe, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 0.9rem 1.5rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .book-cover-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-cover-image img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.35);
+}
+
+    .book-cover h3 {
+      font-size: 1.5rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .author {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .author-image img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 50%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-image img:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+    .checkout {
+      background: linear-gradient(180deg, #e0f2fe, #ffffff);
+      padding: 2.5rem;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .price {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin: 1rem 0;
+    }
+
+    .security {
+      font-size: 0.9rem;
+      color: #475569;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    @media (max-width: 768px) {
+  .hero,
+  .author {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .book-cover-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .author-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .book-cover-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <strong>Flying Guide</strong>
+    <div>
+      <a href="#benefits">Benefits</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#author">Author</a>
+      <a href="#buy">Buy Now</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Hero Section -->
+    <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div>
+      <h1>Learn How to Fly in 4 Weeks</h1>
+      <p>Master the fundamentals of flying with confidence, clarity, and freedom — even if you’re starting from zero.</p>
+      <a href="#buy" class="cta">Download the Flying Guide</a>
+    </div>
+    <div class="book-cover-image">
+      <img 
+        src="learn-how-to-fly-4-weeks-book-cover.png" 
+        alt="Book cover of Learn How to Fly in 4 Weeks, a digital flying guide"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits">
+    <h2>What You’ll Learn</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Week‑by‑Week Structure</h3>
+        <p>Clear daily lessons that build skill and confidence progressively.</p>
+      </div>
+      <div class="card">
+        <h3>Flight Fundamentals</h3>
+        <p>Understand aerodynamics, controls, safety, and decision‑making.</p>
+      </div>
+      <div class="card">
+        <h3>Confidence‑First Approach</h3>
+        <p>Remove fear and overwhelm with simple, proven explanations.</p>
+      </div>
+      <div class="card">
+        <h3>Practical Checklists</h3>
+        <p>Use real‑world flying checklists and mental models.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews">
+    <h2>What Readers Are Saying</h2>
+    <div class="reviews">
+      <div class="card">
+        <p>“This book finally made flying concepts click. Simple, logical, and motivating.”</p>
+        <strong>— Alex M.</strong>
+      </div>
+      <div class="card">
+        <p>“I went from intimidated to confident in weeks. Highly recommended.”</p>
+        <strong>— Sarah K.</strong>
+      </div>
+      <div class="card">
+        <p>“The structure is perfect. Each week builds naturally into the next.”</p>
+        <strong>— Daniel R.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author Section -->
+    <!-- Author Section -->
+  <section id="author">
+    <h2>About the Author</h2>
+    <div class="author">
+      <div class="author-image">
+        <img 
+          src="author-john-stevens.png" 
+          alt="Portrait of John Stevens, experienced aviation instructor and pilot"
+          loading="lazy"
+        />
+      </div>
+      <div class="author-bio">
+        <p>
+          Written by <strong>John Stevens</strong>, an experienced aviation instructor with over 10 years of teaching beginners how to fly safely and confidently. He has trained hundreds of students and specializes in simplifying complex aviation concepts into clear, actionable lessons.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout Section -->
+  <section id="buy">
+    <div class="checkout">
+      <h2>Get Instant Access</h2>
+      <p>Download the complete digital book and start learning today.</p>
+      <div class="price">$29</div>
+      <a href="#" class="cta">Buy Now & Download</a>
+      <div class="security">
+        🔒 Secure checkout • Instant download • Satisfaction guaranteed
+      </div>
+      <p style="margin-top:1rem; font-size:0.9rem;">Bonus: Free sample chapter included.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Learn How to Fly in 4 Weeks. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
